@@ -72,6 +72,7 @@ public class NewNioServer {
                     executorService.execute(new Runnable() {
                         @Override
                         public void run() {
+                            System.out.println(Thread.currentThread().getName()+"正在执行处理请求");
                             handler(selectionKey);
                         }
                     });
